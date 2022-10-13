@@ -1,0 +1,210 @@
+/*fonts 1*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
+
+:root {
+    /*Primary colors*/
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --darkCyanT: hsl(159, 74%, 9%);
+
+    /*Neutral colors*/
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    place-content: center;
+}
+
+main {
+    min-height: 100vh;
+    width: 344px;
+    margin: 40px auto 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--white);
+    align-content: center;
+    justify-content: center;
+}
+
+.banner {
+    width: inherit;
+    height: 248px;
+    background-image: url(images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.right {
+    padding: 0 27px;
+}
+
+.description h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 33px;
+    margin-bottom: 20px;
+    text-align: start;
+    word-spacing: 2px;
+}
+
+.description p:nth-child(1) {
+    margin-top: 28px;
+    margin-bottom: 13px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--darkGrayishBlue);
+    font-size: 12px;
+}
+
+.description p:nth-child(3) {
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--darkGrayishBlue);
+    line-height: 1.5;
+    padding-right: 15px;
+}
+
+.prices {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.price-with-discount {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    color: var(--darkCyan);
+}
+
+.price-without-discount {
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: line-through;
+    color: var(--darkGrayishBlue);
+}
+
+.price-icon img{
+    color: var(--white);
+    font-size: 20px;
+    width: 15px;
+    height: 15px;
+}
+
+button {
+    width: 297px;
+    height: 45px;
+    background-color: var(--darkCyan);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--white);
+    border: none;
+    margin-bottom: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-cart {
+    color: var(--white);
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: var(--darkCyanT);
+}
+
+.attribution { 
+    font-size: 15px; 
+    text-align: center; 
+}
+
+.attribution a {
+    font-size: 15px; 
+    color: hsl(228, 45%, 44%); 
+} 
+
+@media(min-width: 640px) {
+    main{
+        min-height: 450px;
+        width: 600px;
+        display:flex;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .left {
+        width: 50%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 450px;
+        background-image: url('./images/image-product-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .right {
+        width: 50%;
+        margin-left: 25px;
+        padding: 0;
+    }
+
+    .description {
+        padding: 0;
+        margin-right: 25px;;
+    }
+
+    .description h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+        padding-right: 28px;
+    }
+
+    .description p:nth-child(1) {
+        margin: 20px 0 15px 0;
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+    .description p:nth-child(3) {
+        margin-bottom: 20px;
+        font-size: 14px;
+        padding-right: 23px;
+    }
+
+    button {
+        width: 238px;
+        height: 40px;
+        margin-bottom: 25px;
+        color: var(--white);
+        font-size: 15px; 
+        font-weight: bold;
+    }
+
+    .prices {
+        width: 245px;
+    }
+    
+}
